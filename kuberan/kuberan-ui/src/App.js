@@ -1,12 +1,11 @@
-import Header from "./components/Header";
+import { ChakraProvider, theme } from '@chakra-ui/react';
+import StrategyBuilder from './components/StrategyBuilder';
 
-export default function App(){
+export default function App() {
   return (
-    <div>
-      <Header />
-      <div className="strategy-builder">
-        
-      </div>
-    </div>
+    <ChakraProvider theme={theme}>
+      <StrategyBuilder />
+    </ChakraProvider>
   );
 }
+
