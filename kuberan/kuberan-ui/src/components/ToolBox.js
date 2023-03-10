@@ -1,12 +1,19 @@
-import { Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPanel } from '@chakra-ui/react';
+import { 
+    Accordion, 
+    AccordionButton, 
+    AccordionIcon, 
+    AccordionItem, 
+    AccordionPanel, 
+    Box 
+} from '@chakra-ui/react';
 
 export default function ToolBox(){
     return (
-        <div>
-            <h2>ToolBox</h2>
+        <Box w='10rem' mr={10}>
+            {/* <h2>ToolBox</h2> */}
             <div>
                 <Accordion allowToggle>
-                    <AccordionItem>
+                    {/* <AccordionItem>
                         <AccordionButton>
                             Instruments
                             <AccordionIcon />
@@ -14,15 +21,20 @@ export default function ToolBox(){
                         <AccordionPanel>
                             Search and add instrument
                         </AccordionPanel>
-                    </AccordionItem>
+                    </AccordionItem> */}
 
                     <AccordionItem>
                         <AccordionButton>
-                            Interval
+                            Intervals
                             <AccordionIcon />
                         </AccordionButton>
                         <AccordionPanel>
-                            Show different intervals
+                            <div>seconds</div>
+                            <div>minutes</div>
+                            <div>hour</div>
+                            <div>daily</div>
+                            <div>weekly</div>
+                            <div>monthly</div>
                         </AccordionPanel>
                     </AccordionItem>
 
@@ -58,6 +70,6 @@ export default function ToolBox(){
 
                 </Accordion>
             </div>
-        </div>
+        </Box>
     );
 }

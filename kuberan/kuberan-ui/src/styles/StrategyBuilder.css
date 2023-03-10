@@ -1,4 +1,5 @@
 .strategy-builder{
     /* background: red; */
     display: flex;
+    height: 100vh;
 }

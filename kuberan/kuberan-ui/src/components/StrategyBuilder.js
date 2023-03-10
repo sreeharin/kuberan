@@ -1,4 +1,5 @@
 import '../styles/StrategyBuilder.css';
+import StrategyBuilderHeader from './StrategyBuilderHeader';
 import ToolBox from './ToolBox';
 
 function BuildingArea(){
@@ -13,9 +14,12 @@ function BuildingArea(){
 
 export default function StrategyBuilder(){
     return (
-        <div className="strategy-builder">
-            <ToolBox />
-            <BuildingArea />
+        <div>
+            <StrategyBuilderHeader />
+            <div className="strategy-builder">
+                <ToolBox />
+                <BuildingArea />
+            </div>
         </div>
     );
 }
