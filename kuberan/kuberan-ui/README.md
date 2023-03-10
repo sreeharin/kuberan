@@ -2,7 +2,8 @@
 Front end for Kuberan
 
 ## Directory structure
-'''
+
+```
 public                      # Boilerplate code
 src
 ├── App.js
@@ -20,4 +21,4 @@ src
 ├── styles
 │   └── StrategyBuilder.css
 └── test-utils.js
-'''
+```
