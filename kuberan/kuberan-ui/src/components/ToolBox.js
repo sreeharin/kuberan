@@ -4,37 +4,42 @@ import {
     AccordionIcon, 
     AccordionItem, 
     AccordionPanel, 
-    Box 
+    Box, 
+    SimpleGrid,
+    Tooltip
 } from '@chakra-ui/react';
 
 export default function ToolBox(){
     return (
         <Box w='10rem' mr={10}>
-            {/* <h2>ToolBox</h2> */}
             <div>
                 <Accordion allowToggle>
-                    {/* <AccordionItem>
-                        <AccordionButton>
-                            Instruments
-                            <AccordionIcon />
-                        </AccordionButton>
-                        <AccordionPanel>
-                            Search and add instrument
-                        </AccordionPanel>
-                    </AccordionItem> */}
-
                     <AccordionItem>
                         <AccordionButton>
                             Intervals
                             <AccordionIcon />
                         </AccordionButton>
                         <AccordionPanel>
-                            <div>seconds</div>
-                            <div>minutes</div>
-                            <div>hour</div>
-                            <div>daily</div>
-                            <div>weekly</div>
-                            <div>monthly</div>
+                            <SimpleGrid columns={3} spacingY={3} spacingX={2}>
+                                <Tooltip hasArrow label='Seconds'>
+                                    <div className='menu-item'>sec</div>
+                                </Tooltip>
+                                <Tooltip hasArrow label='Minute'>
+                                    <div className='menu-item'>min</div>
+                                </Tooltip>
+                                <Tooltip hasArrow label='Hour'>
+                                    <div className='menu-item'>hr</div>
+                                </Tooltip>
+                                <Tooltip hasArrow label='Daily'>
+                                    <div className='menu-item'>D</div>
+                                </Tooltip>
+                                <Tooltip hasArrow label='Weekly'>
+                                    <div className='menu-item'>W</div>
+                                </Tooltip>
+                                <Tooltip hasArrow label='Monthly'>
+                                    <div className='menu-item'>M</div>
+                                </Tooltip>
+                            </SimpleGrid>
                         </AccordionPanel>
                     </AccordionItem>
 
@@ -44,7 +49,14 @@ export default function ToolBox(){
                             <AccordionIcon />
                         </AccordionButton>
                         <AccordionPanel>
-                            CNC/MIS
+                            <SimpleGrid columns={2} spacingX={2}>
+                                <Tooltip hasArrow label='Carry forward'>
+                                    <div className='menu-item'>CNC</div>
+                                </Tooltip>
+                                <Tooltip hasArrow label='Intraday'>
+                                    <div className='menu-item'>MIS</div>
+                                </Tooltip>
+                            </SimpleGrid>
                         </AccordionPanel>
                     </AccordionItem>
 
@@ -54,7 +66,10 @@ export default function ToolBox(){
                             <AccordionIcon />
                         </AccordionButton>
                         <AccordionPanel>
-                            Long/Short
+                            <SimpleGrid columns={2} spacingX={2}>
+                                <div className="menu-item">Long</div>
+                                <div className="menu-item">Short</div>
+                            </SimpleGrid>
                         </AccordionPanel>
                     </AccordionItem>
 
@@ -64,7 +79,17 @@ export default function ToolBox(){
                             <AccordionIcon />
                         </AccordionButton>
                         <AccordionPanel>
-                            MACD, Moving average
+                            <SimpleGrid columns={2} spacingX={2} spacingY={3}>
+                                <Tooltip hasArrow label='Moving Average Crossover/Divergence'>
+                                    <div className="menu-item">MACD</div>
+                                </Tooltip>
+                                <Tooltip hasArrow label='Simple Moving Average'>
+                                    <div className="menu-item">SMA</div>
+                                </Tooltip>
+                                <Tooltip hasArrow label='Exponential Moving Average'>
+                                    <div className="menu-item">EMA</div>
+                                </Tooltip>
+                            </SimpleGrid>
                         </AccordionPanel>
                     </AccordionItem>
 

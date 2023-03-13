@@ -1,5 +1,16 @@
 .strategy-builder{
-    /* background: red; */
     display: flex;
     height: 100vh;
+}
+
+.menu-item{
+    border: 1px solid gray;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    text-align: center;
+    box-shadow: 0px 0px 2px blanchedalmond;
+}
+
+.menu-item:hover{
+    transform: scale(110%);
 }
